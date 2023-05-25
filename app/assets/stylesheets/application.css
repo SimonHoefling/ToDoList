@@ -13,48 +13,86 @@
  *= require_tree .
  *= require_self
  */
- @import "notes/index";
 
+ /* Google Font */
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400;1,500&display=swap');
+
+ /* Generea CSS rules */
  body {
-  background-color: rgb(255, 255, 255);
+   background-color: rgb(201, 196, 196);
  }
  body, h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Nunito', sans-serif;
  }
 
- .head-container {
+ /* CSS rules for the dashboard on desktop go here */
+ @media only screen and (min-width: 997px) {
+ }
+
+ /* CSS rules for the dashboard on tablets go here */
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+}
+
+/* CSS rules for the dashboard on phones go here */
+@media only screen and (max-width: 480px) {
+}
+/* Headline */
+.head-container {
   width: 100vw;
   background-color: rgb(38, 37, 37);
- }
- .head-container h1 {
+}
+.head-container h1 {
   text-align: center;
   padding: 10px 0;
   color: #ffffff;
- }
- .input-card {
+  letter-spacing: 2px;
+}
+/* Input Card */
+.input-card {
   width: 80%;
   margin: 20px auto;
   border-radius: 12px;
-  padding: 10px; /* Add padding to create some space between the border and contents */
-  box-sizing: border-box; /* Include padding and border in the width calculation */
+  padding: 10px;
+  background-color: rgb(38, 37, 37);
+  color: #ffffff;
+  box-sizing: border-box;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
-
 .input-card div {
   margin-bottom: 10px;
 }
-
 .input-card label {
   display: block;
   margin-bottom: 5px;
 }
-
 .input-card input,
 .input-card textarea {
   width: 100%;
-  box-sizing: border-box; /* Include padding and border in the width calculation */
+  box-sizing: border-box;
+}
+/* Styling for the notes */
+.note-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+.note-container.first-note {
+  border-top: 1px solid rgb(38, 37, 37);
+}
+.note-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+.delete-btn {
+  background: transparent;
+  border: none;
 }

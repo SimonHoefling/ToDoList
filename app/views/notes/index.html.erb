@@ -9,7 +9,7 @@
 <div class="input-card">
   <%= form_with(model: @new_note, url: notes_path, local: true) do |form| %>
     <div>
-      <%= form.label :name %>
+      <%= form.label :name, "Title" %>
       <%= form.text_field :name %>
     </div>
     <div>
@@ -24,9 +24,15 @@
 
 <!-- Display existing notes -->
 <% @notes.each do |note| %>
-  <div>
-    <h3><%= note.name %></h3>
-    <p><%= note.description %></p>
-    <%= button_to 'Delete', note_path(note), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <div class="note-container <%= 'first-note' if note == @notes.first %>">
+    <div class="note-left">
+      <h3 class="note-title"><%= note.name %></h3>
+      <p><%= note.description %></p>
+    </div>
+    <div class="note-right">
+      <%= button_to note_path(note), method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-btn" do %>
+        <i class="fa-solid fa-trash" style="color: #202122;font-size: 24px;"></i>
+      <% end %>
+    </div>
   </div>
 <% end %>

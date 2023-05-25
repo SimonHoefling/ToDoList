@@ -12,12 +12,13 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_05_25_053200) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'notes', force: :cascade do |t|
-    t.text 'name'
-    t.text 'description'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "notes", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end
