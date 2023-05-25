@@ -1,14 +1,32 @@
-<p style="color: green"><%= notice %></p>
+<!-- app/views/notes/index.html.erb -->
+<div class="head-container">
+  <h1>ADD A NOTE</h1>
+</div>
 
-<h1>Notes</h1>
 
-<div id="notes">
-  <% @notes.each do |note| %>
-    <%= render note %>
-    <p>
-      <%= link_to "Show this note", note %>
-    </p>
+
+<!-- Form to create new notes -->
+<div class="input-card">
+  <%= form_with(model: @new_note, url: notes_path, local: true) do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+    <div>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
+    <div>
+      <%= form.submit 'Save' %>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New note", new_note_path %>
+<!-- Display existing notes -->
+<% @notes.each do |note| %>
+  <div>
+    <h3><%= note.name %></h3>
+    <p><%= note.description %></p>
+    <%= button_to 'Delete', note_path(note), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
