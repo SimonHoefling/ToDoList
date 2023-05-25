@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Screenshots
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone project
+```bash
+git clone git@github.com:SimonHoefling/ToDoList.git
+```
+2. Navigate into the folder
+```bash
+cd ToDoList
+```
+3. Download dependencies
+```bash
+bundle install
+```
+4. Create the Database
+```bash
+rails db:create
+```
+5. Run the migration files
+```bash
+rails db:migrate
+```
+5. Start the local development server
+```bash
+dev
+```
+or
+```bash
+rails server
+```
+6. Open app in your browser under http://localhost:3000/
