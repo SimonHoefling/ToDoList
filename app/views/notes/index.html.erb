@@ -23,16 +23,18 @@
 </div>
 
 <!-- Display existing notes -->
-<% @notes.each do |note| %>
-  <div class="note-container <%= 'first-note' if note == @notes.first %>">
-    <div class="note-left">
-      <h3 class="note-title"><%= note.name %></h3>
-      <p><%= note.description %></p>
+<div class="note-desktop-container">
+  <% @notes.each do |note| %>
+    <div class="note-container <%= 'first-note' if note == @notes.first %>">
+      <div class="note-left">
+        <h3 class="note-title"><%= note.name %></h3>
+        <p><%= note.description %></p>
+      </div>
+      <div class="note-right">
+        <%= button_to note_path(note), method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-btn" do %>
+          <i class="fa-solid fa-trash" style="color: #202122;font-size: 24px;"></i>
+        <% end %>
+      </div>
     </div>
-    <div class="note-right">
-      <%= button_to note_path(note), method: :delete, data: { confirm: 'Are you sure?' }, class:"delete-btn" do %>
-        <i class="fa-solid fa-trash" style="color: #202122;font-size: 24px;"></i>
-      <% end %>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

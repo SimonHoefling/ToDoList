@@ -30,6 +30,67 @@
 
  /* CSS rules for the dashboard on desktop go here */
  @media only screen and (min-width: 997px) {
+  /* Headline */
+  .head-container {
+    width: 100vw;
+    background-color: rgb(38, 37, 37);
+  }
+  .head-container h1 {
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+  /* Input Card */
+  .input-card {
+    width: 40%;
+    margin: 20px auto;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgb(38, 37, 37);
+    color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  }
+  .input-card div {
+    margin-bottom: 10px;
+  }
+  .input-card label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .input-card input,
+  .input-card textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* Styling for the notes */
+  .note-desktop-container {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .note-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  }
+  .note-container.first-note {
+    border-top: 0.5px solid #000000;
+  }
+  .note-title {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .delete-btn {
+    background: transparent;
+    border: none;
+  }
  }
 
  /* CSS rules for the dashboard on tablets go here */
@@ -38,61 +99,61 @@
 
 /* CSS rules for the dashboard on phones go here */
 @media only screen and (max-width: 480px) {
-}
-/* Headline */
-.head-container {
-  width: 100vw;
-  background-color: rgb(38, 37, 37);
-}
-.head-container h1 {
-  text-align: center;
-  padding: 10px 0;
-  color: #ffffff;
-  letter-spacing: 2px;
-}
-/* Input Card */
-.input-card {
-  width: 80%;
-  margin: 20px auto;
-  border-radius: 12px;
-  padding: 10px;
-  background-color: rgb(38, 37, 37);
-  color: #ffffff;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
-.input-card div {
-  margin-bottom: 10px;
-}
-.input-card label {
-  display: block;
-  margin-bottom: 5px;
-}
-.input-card input,
-.input-card textarea {
-  width: 100%;
-  box-sizing: border-box;
-}
-/* Styling for the notes */
-.note-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
-}
-.note-container.first-note {
-  border-top: 1px solid rgb(38, 37, 37);
-}
-.note-title {
-  font-weight: bold;
-  font-size: 22px;
-}
-.delete-btn {
-  background: transparent;
-  border: none;
+  /* Headline */
+  .head-container {
+    width: 100vw;
+    background-color: rgb(38, 37, 37);
+  }
+  .head-container h1 {
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+  /* Input Card */
+  .input-card {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgb(38, 37, 37);
+    color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  }
+  .input-card div {
+    margin-bottom: 10px;
+  }
+  .input-card label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .input-card input,
+  .input-card textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* Styling for the notes */
+  .note-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  }
+  .note-container.first-note {
+    border-top: 1px solid rgb(38, 37, 37);
+  }
+  .note-title {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .delete-btn {
+    background: transparent;
+    border: none;
+  }
 }
