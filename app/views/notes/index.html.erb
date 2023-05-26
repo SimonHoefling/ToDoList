@@ -23,7 +23,7 @@
 </div>
 
 <!-- Display existing notes -->
-<div class="note-desktop-container">
+<div class="note-desktop-container" data-controller="sortable">
   <% @notes.each do |note| %>
     <div class="note-container <%= 'first-note' if note == @notes.first %>">
       <div class="note-left">
