@@ -80,8 +80,14 @@
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
   }
+  .note-container:hover {
+    -moz-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    transition: ease-in-out 0.3s;
+  }
   .note-container.first-note {
-    border-top: 0.5px solid #000000;
+    /* border-top: 0.5px solid #000000; */
   }
   .note-title {
     font-weight: bold;
