@@ -1,4 +1,5 @@
 # README
+This is a simple Rails App do add end remove ToDos. The list can also be sorted by drag and drop.
 
 ## Screenshots
 
