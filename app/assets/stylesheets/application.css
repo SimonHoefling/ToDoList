@@ -85,6 +85,7 @@
     -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
     transition: ease-in-out 0.3s;
+    cursor: pointer;
   }
   .note-title {
     font-weight: bold;
